@@ -4,77 +4,9 @@
 # See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 layout: home
 author_profile: true
-<!-- header:
-    image: /assets/images/banner-image.jpg
-    caption: "Image credit: [Kevin Ki](https://unsplash.com/photos/closeup-photo-of-eyeglasses-w7ZyuGYNpRQ)" -->
 header:
-<h2>Automatic Slideshow</h2>
-<p>Change image every 2 seconds:</p>
-
-<div class="slideshow-container">
-
-<div class="mySlides fade">
-  <div class="numbertext">1 / 5</div>
-  <img src="assets/images/343595296_6504872666204240_3976447383175221161_n.jpg" style="width:100%">
-  <div class="text">DistilBert</div>
-</div>
-
-<div class="mySlides fade">
-  <div class="numbertext">2 / 5</div>
-  <img src="assets/images/280695284_10158192154877827_3280757286633662323_n.jpg" style="width:100%">
-  <div class="text">NRCLex</div>
-</div>
-
-<div class="mySlides fade">
-  <div class="numbertext">3 / 5</div>
-  <img src="assets/images/116346246_10156989019362827_3152395632815202461_n.jpg" style="width:100%">
-  <div class="text">Roberta</div>
-</div>
-
-<div class="mySlides fade">
-  <div class="numbertext">4 / 5</div>
-  <img src="assets/images/infolab.JPG" style="width:100%">
-  <div class="text">RobertaGo</div>
-</div>
-
-<div class="mySlides fade">
-  <div class="numbertext">5 / 5</div>
-  <img src="assets/images/277800041_10158134051172827_4691392804283498428_n.jpg" style="width:100%">
-  <div class="text">T5</div>
-</div>
-
-</div>
-<br>
-
-<div style="text-align:center">
-  <span class="dot"></span> 
-  <span class="dot"></span> 
-  <span class="dot"></span> 
-  <span class="dot"></span> 
-  <span class="dot"></span> 
-</div>
-
-<script>
-let slideIndex = 0;
-showSlides();
-
-function showSlides() {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}    
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
-  setTimeout(showSlides, 2000); // Change image every 2 seconds
-}
-</script>
+    image: /assets/images/banner-image.jpg
+    caption: "Image credit: [Kevin Ki](https://unsplash.com/photos/closeup-photo-of-eyeglasses-w7ZyuGYNpRQ)"
 ---
 Welcome to the website for the First International Conference on Natural Language Processing and Artificial Intelligence for Cyber Security (NLPAICS 2024).
 
