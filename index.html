@@ -4,10 +4,34 @@
 # See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 layout: home
 author_profile: true
-header:
-    image: /assets/images/banner-image.jpg
-    caption: "Image credit: [Kevin Ki](https://unsplash.com/photos/closeup-photo-of-eyeglasses-w7ZyuGYNpRQ)"
+<!-- header:
+<!--     image: /assets/images/banner-image.jpg -->
+<!--     slideShow: 
+    caption: "Image credit: [Kevin Ki](https://unsplash.com/photos/closeup-photo-of-eyeglasses-w7ZyuGYNpRQ)" --> -->
 ---
+
+<nav>
+	<a class="nav-link" href="https://github.com/lexoyo/jekyll-slideshow/">Jekyll Slideshow</a>
+</nav>
+<section class="main-slides">
+	{% for slide in site.slides %}
+	<article class="slide">
+		<iframe class="slideshow-iframe" src="{{ site.github.url }}{{ slide.url }}"></iframe>
+		<div class="sub-slideshow">
+			<h1>{{ slide.title }}</h1>
+			<a class="edit" href="{{site.github.repository_url}}/edit/gh-pages/{{slide.path}}">Edit</a>
+			<a class="view" href="{{ site.github.url }}{{ slide.url }}">View</a>
+			<a class="embed" href="#">Embed</a>
+			<div class="embed-pane hidden">
+				<p>To embed this slide in a website, add this code to your page:</p>
+				<input class="embed-input" 
+					value='&lt;iframe src="{{ site.github.url }}{{ slide.url }}" width="100%" height="100%" style="border: none;"&gt;&lt;/iframe&gt;'
+					spellcheck="false"></input>
+			</div>
+		</div>
+	</article>
+	{% endfor %}
+</section>
 Welcome to the website for the First International Conference on Natural Language Processing and Artificial Intelligence for Cyber Security (NLPAICS 2024).
 
 Recent advances in Natural Language Processing (NLP), Deep Learning and Large Language Models have resulted in improved performance of applications benefiting from these techniques.  
@@ -17,13 +41,3 @@ In today's digital world Cyber Security has emerged and its importance has magni
 
 For any initial queries, please feel free to contact Prof Ruslan Mitkov on r.mitkov@lancaster.ac.uk. 
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-
-<script>
-  function resizeIframe(obj) {
-    obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
-  }
-</script>
-
-<iframe class="slideshow-iframe" src="https://MarkusThill.github.io/slides/my-pics1.html"
-style="width:100%" frameborder="0" scrolling="no" onload="resizeIframe(this)"></iframe>`
