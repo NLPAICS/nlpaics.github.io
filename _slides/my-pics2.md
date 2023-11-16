@@ -1,6 +1,7 @@
 ---
 layout: iframe
 title: My pictures gallery
+permalink: /slides/my-pics1.html
 item: 1
 auto: true
 loop: true
