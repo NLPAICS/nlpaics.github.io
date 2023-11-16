@@ -4,6 +4,7 @@ title: My slideshow
 item: 1
 auto: true
 loop: true
+permalink: /slides/my-pics1.html
 ---
 
 * ![Image 1](my-pics1/116346246_10156989019362827_3152395632815202461_n.jpg)
